@@ -27,9 +27,9 @@ public class ParkingBoyController {
         return parkingBoyService.findAllParkingBoy();
     }
 
-    @PostMapping("/parkingBoys/parkingBoy/{id}/parkingLots")
-    @ResponseBody
-    public List <ParkingLot> addParkingLot(@PathVariable Integer id ,@RequestBody ParkingLot parkingLot) {
-        return parkingBoyService.addParkingLot(id, parkingLot);
-    }
+//    @PostMapping("/parkingBoys/parkingBoy/{id}/parkingLots")
+//    @ResponseBody
+//    public List <ParkingLot> addParkingLot(@PathVariable Integer id ,@RequestBody ParkingLot parkingLot) {
+//        return parkingBoyService.addParkingLot(id, parkingLot);
+//    }
 }

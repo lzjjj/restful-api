@@ -6,4 +6,5 @@ import java.util.List;
 public interface ParkingLotService {
     public List<ParkingLot> findAllParkingLot();
     public ParkingLot addParkingLot(ParkingLot parkingLot);
+    public ParkingLot updateParkingLot(int lID,int bID);
 }

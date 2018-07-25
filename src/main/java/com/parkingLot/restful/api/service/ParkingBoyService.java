@@ -8,5 +8,4 @@ import java.util.List;
 public interface ParkingBoyService {
     public List<ParkingBoy> findAllParkingBoy();
     public ParkingBoy addParkingBoy(ParkingBoy parkingBoy);
-    public List<ParkingLot> addParkingLot(int id,ParkingLot parkingLot);
 }

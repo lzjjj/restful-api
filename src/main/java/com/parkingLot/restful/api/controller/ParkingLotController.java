@@ -18,10 +18,16 @@ public class ParkingLotController {
     public ParkingLot addParkingLot(@RequestBody ParkingLot parkingLot) {
         return ParkingLotService.addParkingLot( parkingLot );
     }
+
     @GetMapping("/parkingLots")
     @ResponseBody
-    public List<ParkingLot> findAllParkingLot() {
-        return ParkingLotService.findAllParkingLot(  );
+    public List <ParkingLot> findAllParkingLot() {
+        return ParkingLotService.findAllParkingLot();
     }
 
+    @PutMapping("/parkingLots/{lID}/{bID}")
+    @ResponseBody
+    public ParkingLot updateParkingLot(@PathVariable int lID, @PathVariable int bID) {
+        return ParkingLotService.updateParkingLot(lID,bID);
+    }
 }

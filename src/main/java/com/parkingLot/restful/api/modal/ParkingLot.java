@@ -3,23 +3,26 @@ package com.parkingLot.restful.api.modal;
 import java.util.Objects;
 
 public class ParkingLot {
-    private Integer id;
+    private Integer lID;
     private Integer size;
+    private Integer bID;
 
-    public ParkingLot(Integer id, Integer size) {
-        this.id = id;
-        this.size = size;
+    public Integer getCurrentNum() {
+        return currentNum;
     }
 
-    public ParkingLot() {
+    public void setCurrentNum(Integer currentNum) {
+        this.currentNum = currentNum;
     }
 
-    public Integer getId() {
-        return id;
+    private Integer currentNum;
+
+    public Integer getlID() {
+        return lID;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setlID(Integer lID) {
+        this.lID = lID;
     }
 
     public Integer getSize() {
@@ -30,13 +33,38 @@ public class ParkingLot {
         this.size = size;
     }
 
+    public Integer getbID() {
+        return bID;
+    }
+
+    public void setbID(Integer bID) {
+        this.bID = bID;
+    }
+
+    public ParkingLot(Integer lID, Integer size, Integer bID) {
+        this.lID = lID;
+        this.size = size;
+        this.bID = bID;
+        this.currentNum = 0;
+    }
+    public boolean isFull(){
+        if(currentNum<size){
+            return false;
+        }
+        return true;
+    }
+    public ParkingLot() {
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof ParkingLot)) return false;
         ParkingLot that = (ParkingLot) o;
-        return Objects.equals( id, that.id ) &&
-                Objects.equals( size, that.size );
+        return Objects.equals( lID, that.lID ) &&
+                Objects.equals( size, that.size ) &&
+                Objects.equals( bID, that.bID );
     }
+
 
 }

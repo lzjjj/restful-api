@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "c541fd2e-fb5a-4b88-a0a2-e34ad36dc48f",
+		"name": "parkingLot api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/parkingLots",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/parkingLots",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"orderID\": \"9f2884a5-79fc-4304-9967-13aceb237613\",\n        \"parkingLotID\": 1\n        \n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/orders/ee8c030e-fc8c-4bff-a7b1-bc0a9b13bd8d/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"ee8c030e-fc8c-4bff-a7b1-bc0a9b13bd8d",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/orders/e32d2e7e-670b-48fe-89ee-96427b0d0ae8/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/parkingLots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/parkingLots",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parkingLots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/orders/ee8c030e-fc8c-4bff-a7b1-bc0a9b13bd8d",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/orders/ee8c030e-fc8c-4bff-a7b1-bc0a9b13bd8d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"ee8c030e-fc8c-4bff-a7b1-bc0a9b13bd8d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

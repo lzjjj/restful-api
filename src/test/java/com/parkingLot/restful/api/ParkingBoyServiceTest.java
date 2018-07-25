@@ -21,7 +21,7 @@ public class ParkingBoyServiceTest {
     public void should_return_a_parkingBoy_when_add_parkingBoy() {
         ParkingBoyServiceImpl parkingBoyService = new ParkingBoyServiceImpl();
         List<ParkingLot> list = RestfulApiApplication.allParkingLots();
-        ParkingBoy parkingBoy = new ParkingBoy( 8,list);
+        ParkingBoy parkingBoy = new ParkingBoy( 8);
         Assert.assertThat(parkingBoyService.addParkingBoy(parkingBoy),Is.is(parkingBoy));
 
     }

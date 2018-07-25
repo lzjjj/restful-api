@@ -1,5 +1,6 @@
 package com.parkingLot.restful.api;
 
+import com.parkingLot.restful.api.modal.Order;
 import com.parkingLot.restful.api.modal.ParkingBoy;
 import com.parkingLot.restful.api.modal.ParkingLot;
 import org.springframework.boot.SpringApplication;
@@ -17,15 +18,21 @@ public class RestfulApiApplication {
 
 	public static List<ParkingLot> allParkingLots() {
 		List<ParkingLot> parkingLotList = new ArrayList<>(  );
-		parkingLotList.add(new ParkingLot(1,5));
-		parkingLotList.add(new ParkingLot(2,5));
+		parkingLotList.add(new ParkingLot(1,5,1));
+		parkingLotList.add(new ParkingLot(2,5,2));
 		return parkingLotList;
 	}
 
 	public static List<ParkingBoy> allParkingBoys() {
 		List<ParkingBoy> parkingBoyList = new ArrayList<>(  );
-		parkingBoyList.add(new ParkingBoy(1,RestfulApiApplication.allParkingLots()));
-		parkingBoyList.add(new ParkingBoy(2,RestfulApiApplication.allParkingLots()));
+		parkingBoyList.add(new ParkingBoy(1));
+		parkingBoyList.add(new ParkingBoy(2));
 		return parkingBoyList;
+	}
+	public static List<Order> allOrders() {
+		List<Order> allOrders = new ArrayList<>(  );
+		allOrders.add(new Order());
+		allOrders.add(new Order());
+		return allOrders;
 	}
 }

@@ -25,18 +25,4 @@ public class ParkingBoyServiceImpl implements ParkingBoyService {
         return parkingBoy;
     }
 
-    @Override
-    public List <ParkingLot> addParkingLot(int id,ParkingLot parkingLot) {
-        for(ParkingBoy i :parkingBoyList){
-            if(i.getId()==id){
-                i.getParkingLotList().add( parkingLot );
-                break;
-            }
-        }
-        return parkingBoyList.stream()
-                .filter( i->i.getId()==id )
-                .collect( Collectors.toList() )
-                .get( 0 )
-                .getParkingLotList();
-    }
 }

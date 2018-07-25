@@ -19,7 +19,7 @@ public class ParkingLotServiceTest {
     @Test
     public void should_return_a_parkingLot_when_add_parkingLot() {
         ParkingLotServiceImpl parkingLotService = new ParkingLotServiceImpl();
-        ParkingLot parkingLot = new ParkingLot( 8,5);
+        ParkingLot parkingLot = new ParkingLot( 8,5,null);
         Assert.assertThat(parkingLotService.addParkingLot(parkingLot),Is.is(parkingLot));
 
     }
@@ -29,5 +29,13 @@ public class ParkingLotServiceTest {
         List<ParkingLot> list = RestfulApiApplication.allParkingLots();
         CompareList compareList = new CompareList();
         Assert.assertThat(compareList.isEqual( parkingLotService.findAllParkingLot(), list),Is.is(true));
+    }
+    @Test
+    public void should_return_a_parkingLot_when_add_parkingLot_for_a_boy() {
+        ParkingLotServiceImpl parkingLotService = new ParkingLotServiceImpl();
+        ParkingLot parkingLot = new ParkingLot( 8,5,null);
+        parkingLotService.addParkingLot( parkingLot );
+        Assert.assertThat(parkingLotService.updateParkingLot(8,1),Is.is(parkingLot));
+
     }
 }
