@@ -11,6 +11,9 @@ public class ParkingLot {
         this.size = size;
     }
 
+    public ParkingLot() {
+    }
+
     public Integer getId() {
         return id;
     }
