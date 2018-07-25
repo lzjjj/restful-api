@@ -1,5 +1,6 @@
 package com.parkingLot.restful.api;
 
+import com.parkingLot.restful.api.modal.ParkingBoy;
 import com.parkingLot.restful.api.modal.ParkingLot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,5 +20,12 @@ public class RestfulApiApplication {
 		parkingLotList.add(new ParkingLot(1,5));
 		parkingLotList.add(new ParkingLot(2,5));
 		return parkingLotList;
+	}
+
+	public static List<ParkingBoy> allParkingBoys() {
+		List<ParkingBoy> parkingBoyList = new ArrayList<>(  );
+		parkingBoyList.add(new ParkingBoy(1,RestfulApiApplication.allParkingLots()));
+		parkingBoyList.add(new ParkingBoy(2,RestfulApiApplication.allParkingLots()));
+		return parkingBoyList;
 	}
 }

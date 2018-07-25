@@ -23,4 +23,5 @@ public class ParkingLotController {
     public List<ParkingLot> findAllParkingLot() {
         return ParkingLotService.findAllParkingLot(  );
     }
+
 }
